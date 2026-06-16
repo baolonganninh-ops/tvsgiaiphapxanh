@@ -1,0 +1,12 @@
+# TVS Giải Pháp Xanh — Website Deployment
+Thumbs.db
+Desktop.ini
+node_modules/
+*.log
+*.py
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
