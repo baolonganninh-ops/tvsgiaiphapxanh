@@ -1,0 +1,32 @@
+# robots.txt — TVS Giai Phap Xanh
+# Tối ưu cho SEO, cho phép Google/Bing hoàn toàn
+# ---------------
+
+User-agent: *
+Allow: /
+
+# Chặn các file không cần index
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+
+# Chặn thư mục admin (nếu có)
+Disallow: /admin/
+
+# Tăng tốc cho Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Tăng tốc cho Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Tăng tốc cho các bot phổ biến khác
+User-agent: Yeti
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Sitemap location
+Sitemap: https://tvsgiaiphapxanh.vn/sitemap.xml
