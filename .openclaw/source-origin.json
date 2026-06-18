@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "source": "git",
+  "spec": "git:https://github.com/baolonganninh-ops/tvsgiaiphapxanh.git",
+  "slug": "tvsgiaiphapxanh",
+  "installedAt": 1781791090386,
+  "git": {
+    "url": "https://github.com/baolonganninh-ops/tvsgiaiphapxanh.git",
+    "commit": "8cdf120efbbea196621f41c5e9180ec906f4a084",
+    "resolvedAt": "2026-06-18T13:58:10.326Z"
+  }
+}

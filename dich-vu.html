@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Danh mục dịch vụ bảo vệ thời vụ chuyên nghiệp của CÔNG TY TNHH TVS GIẢI PHÁP XANH - Bảo vệ sự kiện, lễ Tết, công trường, VIP.">
+  <meta name="keywords" content="bảo vệ thời vụ, bảo vệ sự kiện, bảo vệ lễ Tết, bảo vệ công trường, bảo vệ VIP, TVS Giải Pháp Xanh">
+  <meta name="author" content="CÔNG TY TNHH TVS GIẢI PHÁP XANH">
+  <meta property="og:title" content="Dịch vụ Bảo vệ Thời vụ Chuyên nghiệp | TVS GIẢI PHÁP XANH">
+  <meta name="robots" content="index, follow">
+  <title>Dịch vụ Bảo vệ Thời vụ | CÔNG TY TNHH TVS GIẢI PHÁP XANH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #0B132B;
+      color: #fff;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* ===== CONTAINER ===== */
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+    /* ===== SECTION TITLE ===== */
+    .services-section { padding: 80px 0 100px; }
+    .section-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 56px;
+    }
+    .section-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #10b981;
+      margin-bottom: 14px;
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      background: rgba(16, 185, 129, 0.08);
+      padding: 6px 18px;
+      border-radius: 50px;
+    }
+    .section-title {
+      font-size: clamp(28px, 3.8vw, 44px);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .section-title span {
+      background: linear-gradient(135deg, #10b981, #059669);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .section-desc {
+      font-size: 15px;
+      color: #94a3b8;
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ===== BRAND BAR ===== */
+    .brand-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+    .brand-bar .mark {
+      width: 40px; height: 40px;
+      background: linear-gradient(135deg, #10b981, #047857);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 900; font-size: 15px; color: #fff;
+    }
+    .brand-bar .name {
+      font-weight: 800; font-size: 15px;
+      color: #fff; letter-spacing: -0.2px;
+    }
+    .brand-bar .sub {
+      font-size: 8px; font-weight: 600;
+      color: #10b981; text-transform: uppercase;
+      letter-spacing: 2px; display: block; margin-top: 1px;
+    }
+
+    /* ===== SERVICE GRID ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    /* ===== SERVICE CARD ===== */
+    .service-card {
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 20px;
+      padding: 36px 28px 32px;
+      cursor: pointer;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #10b981, #047857);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      transform-origin: left;
+    }
+    .service-card:hover {
+      transform: scale(1.05);
+      border-color: #10b981;
+      box-shadow: 0 12px 48px rgba(16, 185, 129, 0.12);
+    }
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+    .service-card:active {
+      transform: scale(1.02);
+    }
+
+    /* ===== CARD ICON ===== */
+    .card-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.15);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      transition: all 0.35s ease;
+    }
+    .service-card:hover .card-icon {
+      background: rgba(16, 185, 129, 0.18);
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+
+    /* ===== CARD CONTENT ===== */
+    .card-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+      letter-spacing: -0.2px;
+    }
+    .card-desc {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .card-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .card-bullets li {
+      font-size: 13px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      line-height: 1.4;
+    }
+    .card-bullets li::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: #10b981;
+      border-radius: 50%;
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+
+    /* ===== CARD CLICK HINT ===== */
+    .click-hint {
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #475569;
+      transition: all 0.3s ease;
+    }
+    .click-hint span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .click-hint .arrow {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    .service-card:hover .click-hint {
+      color: #64748b;
+    }
+    .service-card:hover .click-hint .arrow {
+      background: #10b981;
+      color: #fff;
+      transform: translateX(2px);
+    }
+
+    /* ===== MODAL / POPUP ===== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal {
+      background: #0f172a;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      max-width: 600px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 40px 36px;
+      position: relative;
+      transform: scale(0.92) translateY(20px);
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+    }
+    .modal-overlay.active .modal {
+      transform: scale(1) translateY(0);
+    }
+
+    /* Modal scrollbar */
+    .modal::-webkit-scrollbar { width: 4px; }
+    .modal::-webkit-scrollbar-track { background: transparent; }
+    .modal::-webkit-scrollbar-thumb { background: rgba(16, 185, 129, 0.3); border-radius: 4px; }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+      border: none;
+      color: #64748b;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    .modal-close:hover {
+      background: rgba(239, 68, 68, 0.15);
+      color: #ef4444;
+      transform: rotate(90deg);
+    }
+
+    .modal-icon {
+      width: 60px;
+      height: 60px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .modal-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .modal-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      color: #10b981;
+      background: rgba(16, 185, 129, 0.1);
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+
+    .modal-body {
+      font-size: 14px;
+      color: #94a3b8;
+      line-height: 1.75;
+    }
+    .modal-body p { margin-bottom: 14px; }
+    .modal-body strong { color: #e2e8f0; }
+
+    .modal-process {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      padding: 20px;
+      margin: 18px 0;
+    }
+    .modal-process h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #10b981;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+    .modal-process ol {
+      list-style: none;
+      counter-reset: step;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .modal-process ol li {
+      counter-increment: step;
+      font-size: 13px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+    .modal-process ol li::before {
+      content: counter(step);
+      width: 22px;
+      height: 22px;
+      background: rgba(16, 185, 129, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+      color: #10b981;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .modal-commitment {
+      background: rgba(16, 185, 129, 0.06);
+      border: 1px solid rgba(16, 185, 129, 0.12);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 18px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .modal-commitment .shield {
+      font-size: 22px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .modal-commitment h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #10b981;
+      margin-bottom: 4px;
+    }
+    .modal-commitment p {
+      font-size: 13px;
+      color: #94a3b8;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .modal-cta {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .modal-cta .btn-call {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #10b981, #047857);
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      flex: 1;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25);
+    }
+    .modal-cta .btn-call:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 30px rgba(16, 185, 129, 0.35);
+    }
+    .modal-cta .btn-close-modal {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #94a3b8;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 14px 24px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .modal-cta .btn-close-modal:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    /* ===== FOOTER NOTE ===== */
+    .footer-note {
+      text-align: center;
+      margin-top: 48px;
+      font-size: 12px;
+      color: #334155;
+    }
+    .footer-note a {
+      color: #10b981;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .footer-note a:hover { text-decoration: underline; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+    @media (max-width: 640px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+      .services-section { padding: 48px 0 64px; }
+      .service-card { padding: 28px 22px 26px; }
+      .modal { padding: 28px 22px; margin: 12px; }
+      .modal-cta { flex-direction: column; }
+      .modal-cta .btn-call,
+      .modal-cta .btn-close-modal { width: 100%; justify-content: center; }
+      .brand-bar { margin-bottom: 32px; }
+    }
+
+    /* ===== PREVENT BODY SCROLL WHEN MODAL OPEN ===== */
+    body.no-scroll { overflow: hidden; }
+  </style>
+</head>
+<body>
+
+  <!-- ====== SERVICES SECTION ====== -->
+  <section class="services-section">
+    <div class="container">
+
+      <!-- Brand bar -->
+      <div class="brand-bar">
+        <div class="mark">TVS</div>
+        <div>
+          <span class="name">CÔNG TY TNHH TVS GIẢI PHÁP XANH</span>
+          <span class="sub">Dịch vụ Bảo vệ Thời vụ Chuyên nghiệp</span>
+        </div>
+      </div>
+
+      <!-- Section header -->
+      <div class="section-header">
+        <div class="section-tag">Danh mục dịch vụ</div>
+        <h1 class="section-title">
+          Giải pháp Bảo vệ <span>Thời vụ</span><br>
+          Toàn diện
+        </h1>
+        <p class="section-desc">
+          Linh hoạt theo nhu cầu — từ nửa ngày đến nhiều tháng — 
+          cam kết bảo vệ tối ưu cho tài sản và con người của bạn.
+        </p>
+      </div>
+
+      <!-- 4-column grid -->
+      <div class="services-grid" id="servicesGrid">
+
+        <!-- ===== CARD 1: Bảo vệ Sự kiện ===== -->
+        <div class="service-card" data-service="0">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Bảo vệ Sự kiện</h3>
+          <p class="card-desc">Hội nghị, hội thảo, khai trương, triển lãm, liveshow ca nhạc, sự kiện thể thao.</p>
+          <ul class="card-bullets">
+            <li>Kiểm soát ra vào</li>
+            <li>An ninh sân khấu</li>
+            <li>Phân luồng khách</li>
+            <li>Xử lý tình huống khẩn cấp</li>
+          </ul>
+          <div class="click-hint">
+            <span>Nhấp để xem chi tiết</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+
+        <!-- ===== CARD 2: Bảo vệ Lễ Tết ===== -->
+        <div class="service-card" data-service="1">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="18 2 22 6 18 10"/>
+              <polyline points="6 2 2 6 6 10"/>
+              <line x1="12" y1="12" x2="12" y2="22"/>
+              <path d="M8 22h8"/>
+              <path d="M12 22v-4"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Bảo vệ Lễ Tết</h3>
+          <p class="card-desc">Cao điểm Tết Nguyên đán, lễ 30/4, 2/9, Giáng sinh, các mùa cao điểm mua sắm.</p>
+          <ul class="card-bullets">
+            <li>Trực gác xuyên lễ</li>
+            <li>Tuần tra đêm</li>
+            <li>Chống trộm, cháy nổ</li>
+            <li>Báo cáo tình hình hàng ca</li>
+          </ul>
+          <div class="click-hint">
+            <span>Nhấp để xem chi tiết</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+
+        <!-- ===== CARD 3: Bảo vệ Công trường & Kho bãi ===== -->
+        <div class="service-card" data-service="2">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 22L12 2l10 20H2z"/>
+              <line x1="12" y1="2" x2="12" y2="22"/>
+              <line x1="2" y1="22" x2="22" y2="22"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Bảo vệ Công trường &amp; Kho bãi</h3>
+          <p class="card-desc">Công trình xây dựng, kho hàng, bãi vật tư, nhà xưởng đang thi công.</p>
+          <ul class="card-bullets">
+            <li>Canh gác thiết bị nguyên vật liệu</li>
+            <li>Kiểm soát phương tiện ra vào</li>
+            <li>Chống thất thoát công trình</li>
+            <li>Giám sát an toàn lao động</li>
+          </ul>
+          <div class="click-hint">
+            <span>Nhấp để xem chi tiết</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+
+        <!-- ===== CARD 4: Bảo vệ Yếu nhân / VIP ===== -->
+        <div class="service-card" data-service="3">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+              <path d="M18 8l2 3 4-1"/>
+            </svg>
+          </div>
+          <h3 class="card-title">Bảo vệ Yếu nhân / VIP</h3>
+          <p class="card-desc">Bảo vệ cá nhân cấp cao, khách mời VIP, người nổi tiếng, đối tác nước ngoài.</p>
+          <ul class="card-bullets">
+            <li>Vệ sĩ chuyên nghiệp</li>
+            <li>Lên phương án di chuyển</li>
+            <li>Bảo mật thông tin</li>
+            <li>Ứng phó tình huống nguy hiểm</li>
+          </ul>
+          <div class="click-hint">
+            <span>Nhấp để xem chi tiết</span>
+            <span class="arrow">→</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer note -->
+      <div class="footer-note">
+        © 2026 <a href="#">CÔNG TY TNHH TVS GIẢI PHÁP XANH</a> — Hotline: <a href="tel:0913660071">0913 660 071</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MODAL OVERLAY ====== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modalContent">
+
+      <button class="modal-close" id="modalClose" aria-label="Đóng">✕</button>
+
+      <div class="modal-icon" id="modalIcon">
+        <!-- icon injected by JS -->
+      </div>
+
+      <div class="modal-title" id="modalTitle"></div>
+      <div class="modal-badge" id="modalBadge">Dịch vụ bảo vệ chuyên nghiệp</div>
+
+      <div class="modal-body" id="modalBody">
+        <!-- body injected by JS -->
+      </div>
+
+      <div class="modal-cta">
+        <a href="tel:0913660071" class="btn-call">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          Gọi nhận báo giá ngay: 0913 660 071
+        </a>
+        <button class="btn-close-modal" id="modalCloseBtn">✕ Đóng</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ====== JAVASCRIPT ====== -->
+  <script>
+    (function() {
+      // --- Service data ---
+      const services = [
+        {
+          title: 'Bảo vệ Sự kiện',
+          icon: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>`,
+          body: `
+            <p><strong>Bảo vệ sự kiện</strong> là dịch vụ trọng tâm của chúng tôi, dành cho các sự kiện có quy mô từ nhỏ đến lớn. Đội ngũ bảo vệ được đào tạo chuyên sâu về an ninh sự kiện, giao tiếp ứng xử và xử lý tình huống khẩn cấp.</p>
+            <p>Chúng tôi đảm bảo an toàn tuyệt đối cho khách mời, diễn giả, nghệ sĩ và toàn bộ tài sản trong suốt thời gian diễn ra sự kiện.</p>
+            <div class="modal-process">
+              <h4>Quy trình triển khai</h4>
+              <ol>
+                <li><strong>Khảo sát</strong> — Nhân viên khảo sát thực tế địa điểm, đánh giá rủi ro.</li>
+                <li><strong>Lên phương án</strong> — Xây dựng sơ đồ bố trí nhân sự, cổng kiểm soát.</li>
+                <li><strong>Triển khai</strong> — Bố trí lực lượng theo đúng phương án đã duyệt.</li>
+                <li><strong>Giám sát</strong> — Chỉ huy hiện trường xuyên suốt, báo cáo theo ca.</li>
+              </ol>
+            </div>
+            <div class="modal-commitment">
+              <div class="shield">🛡️</div>
+              <div>
+                <h4>Cam kết đền bù thiệt hại</h4>
+                <p>Chúng tôi cam kết bồi thường 100% giá trị tài sản nếu phát sinh mất mát do lỗi của nhân viên bảo vệ trong ca trực.</p>
+              </div>
+            </div>
+          `
+        },
+        {
+          title: 'Bảo vệ Lễ Tết',
+          icon: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 2 22 6 18 10"/>
+            <polyline points="6 2 2 6 6 10"/>
+            <line x1="12" y1="12" x2="12" y2="22"/>
+            <path d="M8 22h8"/>
+            <path d="M12 22v-4"/>
+          </svg>`,
+          body: `
+            <p><strong>Bảo vệ lễ Tết</strong> là giải pháp an ninh cao điểm dành cho doanh nghiệp trong các dịp lễ lớn. Tình trạng trộm cắp, cháy nổ thường gia tăng đột biến vào các dịp này — đội ngũ bảo vệ của chúng tôi túc trực 24/7 xuyên suốt kỳ nghỉ.</p>
+            <div class="modal-process">
+              <h4>Quy trình triển khai</h4>
+              <ol>
+                <li><strong>Đánh giá</strong> — Xác định các điểm yếu về an ninh trong kỳ nghỉ.</li>
+                <li><strong>Lên lịch trực</strong> — Bố trí ca kíp xuyên lễ, nhân sự dự phòng.</li>
+                <li><strong>Triển khai</strong> — Bàn giao ca, kiểm tra thiết bị phòng cháy chữa cháy.</li>
+                <li><strong>Báo cáo</strong> — Gửi báo cáo tình hình mỗi ca qua Zalo/Email.</li>
+              </ol>
+            </div>
+            <div class="modal-commitment">
+              <div class="shield">🔥</div>
+              <div>
+                <h4>Cam kết an toàn tuyệt đối</h4>
+                <p>Nếu xảy ra mất mát tài sản do lỗi bảo vệ trong ca trực lễ, TVS Giải Pháp Xanh cam kết bồi thường toàn bộ theo giá trị thực tế và chịu hoàn toàn trách nhiệm pháp lý.</p>
+              </div>
+            </div>
+          `
+        },
+        {
+          title: 'Bảo vệ Công trường & Kho bãi',
+          icon: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 22L12 2l10 20H2z"/>
+            <line x1="12" y1="2" x2="12" y2="22"/>
+            <line x1="2" y1="22" x2="22" y2="22"/>
+          </svg>`,
+          body: `
+            <p><strong>Bảo vệ công trường và kho bãi</strong> là dịch vụ then chốt dành cho các công trình xây dựng, kho hàng, bãi tập kết vật tư. Tài sản trên công trường thường có giá trị lớn và dễ bị nhắm đến — đội ngũ bảo vệ của chúng tôi canh gác 24/24, kể cả ngoài giờ thi công.</p>
+            <div class="modal-process">
+              <h4>Quy trình triển khai</h4>
+              <ol>
+                <li><strong>Khảo sát hiện trường</strong> — Đánh giá chu vi, điểm mù, số lượng cổng ra vào.</li>
+                <li><strong>Lập phương án</strong> — Bố trí chốt trực, lộ trình tuần tra, camera giám sát.</li>
+                <li><strong>Triển khai & bàn giao</strong> — Nhân sự nhận ca, kiểm đếm tài sản bàn giao.</li>
+                <li><strong>Giám sát & báo cáo</strong> — Chỉ huy khu vực kiểm tra đột xuất, báo cáo định kỳ.</li>
+              </ol>
+            </div>
+            <div class="modal-commitment">
+              <div class="shield">🔒</div>
+              <div>
+                <h4>Cam kết bảo vệ tài sản</h4>
+                <p>TVS Giải Pháp Xanh cam kết bồi thường 100% thiệt hại nếu xảy ra mất mát vật tư, thiết bị do lỗi của nhân viên bảo vệ trong thời gian làm việc.</p>
+              </div>
+            </div>
+          `
+        },
+        {
+          title: 'Bảo vệ Yếu nhân / VIP',
+          icon: `<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+            <path d="M18 8l2 3 4-1"/>
+          </svg>`,
+          body: `
+            <p><strong>Bảo vệ yếu nhân / VIP</strong> là dịch vụ cao cấp nhất, dành cho các cá nhân quan trọng: lãnh đạo doanh nghiệp, khách mời cấp cao, nghệ sĩ nổi tiếng, đối tác nước ngoài. Đội ngũ vệ sĩ của chúng tôi được tuyển chọn kỹ lưỡng, có kỹ năng phòng vệ và ứng phó tình huống nguy hiểm.</p>
+            <div class="modal-process">
+              <h4>Quy trình triển khai</h4>
+              <ol>
+                <li><strong>Tư vấn & đánh giá</strong> — Phân tích mức độ rủi ro, lịch trình di chuyển.</li>
+                <li><strong>Xây dựng phương án</strong> — Lộ trình an toàn, kịch bản ứng phó khẩn cấp.</li>
+                <li><strong>Triển khai</strong> — Bố trí vệ sĩ theo đội hình phù hợp (tiền trạm, hộ tống, hậu bị).</li>
+                <li><strong>Bảo mật & kết thúc</strong> — Tuyệt đối bảo mật thông tin, báo cáo sau nhiệm vụ.</li>
+              </ol>
+            </div>
+            <div class="modal-commitment">
+              <div class="shield">🥇</div>
+              <div>
+                <h4>Cam kết dịch vụ cao cấp</h4>
+                <p>TVS Giải Pháp Xanh cam kết bảo vệ tuyệt đối an toàn cho thân chủ. Vệ sĩ có chứng chỉ đào tạo bài bản, bảo hiểm trách nhiệm nghề nghiệp đầy đủ.</p>
+              </div>
+            </div>
+          `
+        }
+      ];
+
+      // --- DOM refs ---
+      const overlay = document.getElementById('modalOverlay');
+      const modal = document.getElementById('modalContent');
+      const closeBtn = document.getElementById('modalClose');
+      const closeBtn2 = document.getElementById('modalCloseBtn');
+      const modalIcon = document.getElementById('modalIcon');
+      const modalTitle = document.getElementById('modalTitle');
+      const modalBadge = document.getElementById('modalBadge');
+      const modalBody = document.getElementById('modalBody');
+      const cards = document.querySelectorAll('.service-card');
+
+      // --- Open modal ---
+      function openModal(index) {
+        const svc = services[index];
+        if (!svc) return;
+
+        modalIcon.innerHTML = svc.icon;
+        modalTitle.textContent = svc.title;
+        modalBadge.textContent = 'Dịch vụ bảo vệ chuyên nghiệp';
+        modalBody.innerHTML = svc.body;
+
+        overlay.classList.add('active');
+        document.body.classList.add('no-scroll');
+      }
+
+      // --- Close modal ---
+      function closeModal() {
+        overlay.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+      }
+
+      // --- Click card ---
+      cards.forEach(function(card) {
+        card.addEventListener('click', function(e) {
+          const idx = parseInt(this.getAttribute('data-service'), 10);
+          if (!isNaN(idx)) {
+            openModal(idx);
+          }
+        });
+      });
+
+      // --- Close events ---
+      closeBtn.addEventListener('click', closeModal);
+      closeBtn2.addEventListener('click', closeModal);
+
+      overlay.addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+      });
+
+    })();
+  </script>
+</body>
+</html>
