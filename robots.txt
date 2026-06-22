@@ -5,11 +5,6 @@
 User-agent: *
 Allow: /
 
-# Chặn các file không cần index
-Disallow: /*.json$
-Disallow: /*.xml$
-Disallow: /*.txt$
-
 # Chặn thư mục admin (nếu có)
 Disallow: /admin/
 
